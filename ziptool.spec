@@ -1,4 +1,5 @@
 Summary:	Tools for Iomega JAZ and ZIP drives
+Summary(pl):	Narzêdzia do napêdów Iomega JAZ i ZIP
 Name:		ziptool
 Version:	1.3
 Release:	2
@@ -17,14 +18,14 @@ jaztool and ziptool make this features available for Linux.
 %setup -q
 
 %build
-%{__make} CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O0 -g}" 
+%{__make} CFLAGS="%{rpmcflags}" 
 gzip -d ziptool.1.gz
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -s ziptool $RPM_BUILD_ROOT%{_bindir}
+install ziptool $RPM_BUILD_ROOT%{_bindir}
 ln -sf ziptool $RPM_BUILD_ROOT%{_bindir}/jaztool
 
 install ziptool.1 $RPM_BUILD_ROOT%{_mandir}/man1
