@@ -1,7 +1,7 @@
 Summary:	Tools for Iomega JAZ and ZIP drives
 Name:		ziptool
 Version:	1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
