@@ -13,22 +13,24 @@ Medium protection is done by software for Iomega's JAZ and ZIP drives,
 jaztool and ziptool make this features available for Linux.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
 %setup -q
 
 %build
 %{__make} CFLAGS="$RPM_OPT_FLAGS" 
+gzip -d ziptool.1.gz
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+
 install -s ziptool $RPM_BUILD_ROOT%{_bindir}
 ln -sf ziptool $RPM_BUILD_ROOT%{_bindir}/jaztool
 
-install ziptool.1.gz $RPM_BUILD_ROOT%{_mandir}/man1
-ln -sf ziptool.1.gz $RPM_BUILD_ROOT%{_mandir}/man1/jaztool.1.gz
-gzip -9nf README
+install ziptool.1 $RPM_BUILD_ROOT%{_mandir}/man1
+echo ".so ziptool.1" > $RPM_BUILD_ROOT%{_mandir}/man1/jaztool.1
+
+gzip -9nf README \
+	$RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf "$RPM_BUILD_ROOT"
