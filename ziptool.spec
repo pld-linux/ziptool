@@ -1,11 +1,11 @@
 Summary:	Tools for Iomega JAZ and ZIP drives
 Summary(pl):	Narzêdzia do napêdów Iomega JAZ i ZIP
 Name:		ziptool
-Version:	1.3
-Release:	3
+Version:	1.4.0
+Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://www.novia.net/~segura/ziptool/%{name}-%{version}.tar.gz
+Source0:	ftp://wolfpack.twu.net/users/wolfpack/%{name}-%{version}.tar.bz2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,13 +33,11 @@ ln -sf ziptool $RPM_BUILD_ROOT%{_bindir}/jaztool
 install ziptool.1 $RPM_BUILD_ROOT%{_mandir}/man1
 echo ".so ziptool.1" > $RPM_BUILD_ROOT%{_mandir}/man1/jaztool.1
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
