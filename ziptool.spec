@@ -5,9 +5,7 @@ Release:	1
 License:	GPL
 Group:		Utilities/System
 Group(pl):   	Narzêdzia/System
-Source:		%{name}-%{version}.tar.bz2
-# ziptool-1.3 - n
-#Source:	ftp://sunsite.unc.edu/pub/Linux/utils/disk-management/%{name}-%{version}.tar.bz2
+Source:		http://www.novia.net/~segura/ziptool/%{name}-%{version}.tar.gz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
