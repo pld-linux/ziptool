@@ -1,0 +1,12 @@
+diff -uNr ziptool-1.4.0.orig/Makefile ziptool-1.4.0/Makefile
+--- ziptool-1.4.0.orig/Makefile	2002-08-24 00:13:48.000000000 +0200
++++ ziptool-1.4.0/Makefile	2004-03-18 17:31:41.576789100 +0100
+@@ -7,7 +7,7 @@
+ 
+ # Path to linux kernel sources.
+ #
+-LINUX_SRC_DIR = /usr/src/linux
++LINUX_SRC_DIR = /usr
+ 
+ # Installation directories
+ #
