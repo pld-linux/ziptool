@@ -29,8 +29,7 @@ ln -sf ziptool $RPM_BUILD_ROOT%{_bindir}/jaztool
 install ziptool.1 $RPM_BUILD_ROOT%{_mandir}/man1
 echo ".so ziptool.1" > $RPM_BUILD_ROOT%{_mandir}/man1/jaztool.1
 
-gzip -9nf README \
-	$RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf README
 
 %clean
 rm -rf "$RPM_BUILD_ROOT"
