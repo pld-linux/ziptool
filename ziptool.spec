@@ -20,7 +20,7 @@ no¶nika; jaztool i ziptool pozwalaj± zrobiæ to pod Linuksem.
 %setup -q
 
 %build
-%{__make} CFLAGS="%{rpmcflags}" 
+%{__make} CFLAGS="%{rpmcflags}"
 gzip -d ziptool.1.gz
 
 %install
@@ -40,6 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz 
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
