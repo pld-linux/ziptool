@@ -1,6 +1,6 @@
-diff -uNr ziptool-1.4.0.orig/Makefile ziptool-1.4.0/Makefile
---- ziptool-1.4.0.orig/Makefile	2002-08-24 00:13:48.000000000 +0200
-+++ ziptool-1.4.0/Makefile	2004-03-18 17:31:41.576789100 +0100
+diff -Nur ziptool-1.4.0.org/Makefile ziptool-1.4.0/Makefile
+--- ziptool-1.4.0.org/Makefile	2002-08-23 22:13:48.000000000 +0000
++++ ziptool-1.4.0/Makefile	2004-03-28 11:21:25.000000000 +0000
 @@ -7,7 +7,7 @@
  
  # Path to linux kernel sources.
@@ -10,3 +10,16 @@ diff -uNr ziptool-1.4.0.orig/Makefile ziptool-1.4.0/Makefile
  
  # Installation directories
  #
+diff -Nur ziptool-1.4.0.org/ziptool.c ziptool-1.4.0/ziptool.c
+--- ziptool-1.4.0.org/ziptool.c	2002-08-28 03:07:36.000000000 +0000
++++ ziptool-1.4.0/ziptool.c	2004-03-28 11:22:03.000000000 +0000
+@@ -85,6 +85,9 @@
+ #define MOUNT_CMD			"/bin/mount"
+ #define UMOUNT_CMD			"/bin/umount"
+ 
++#define    SCSI_REMOVAL_ALLOW      0
++#define    SCSI_REMOVAL_PREVENT    1
++
+ /*
+  *	Model list, last entry must be a NULL pointer. Casing is
+  *	insensitive.
