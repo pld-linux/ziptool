@@ -1,5 +1,5 @@
 Summary:	Tools for Iomega JAZ and ZIP drives
-Summary(pl):	Narzêdzia do napêdów Iomega JAZ i ZIP
+Summary(pl.UTF-8):   NarzÄ™dzia do napÄ™dÃ³w Iomega JAZ i ZIP
 Name:		ziptool
 Version:	1.4.0
 Release:	1
@@ -15,9 +15,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Medium protection is done by software for Iomega's JAZ and ZIP drives,
 jaztool and ziptool make this features available for Linux.
 
-%description -l pl
-Oprogramowanie dla napêdów Iomega JAZ i ZIP pozwala na zabezpieczenie
-no¶nika; jaztool i ziptool pozwalaj± zrobiæ to pod Linuksem.
+%description -l pl.UTF-8
+Oprogramowanie dla napÄ™dÃ³w Iomega JAZ i ZIP pozwala na zabezpieczenie
+noÅ›nika; jaztool i ziptool pozwalajÄ… zrobiÄ‡ to pod Linuksem.
 
 %prep
 %setup -q
