@@ -1,5 +1,5 @@
 Summary:	Tools for Iomega JAZ and ZIP drives
-Summary(pl.UTF-8):   Narzędzia do napędów Iomega JAZ i ZIP
+Summary(pl.UTF-8):	Narzędzia do napędów Iomega JAZ i ZIP
 Name:		ziptool
 Version:	1.4.0
 Release:	1
