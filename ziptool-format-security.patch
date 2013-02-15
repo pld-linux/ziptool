@@ -1,0 +1,11 @@
+--- ziptool-1.4.0/ziptool.c.formatsec	2013-02-15 17:34:38.758667943 +0100
++++ ziptool-1.4.0/ziptool.c	2013-02-15 17:37:55.757600709 +0100
+@@ -542,7 +542,7 @@ static int jazip_get_password(
+ 	 * Keep reading from stdin until a newline '\n' character
+ 	 * is received.
+ 	 */
+-	(void)printf(prompt);
++	(void)fputs(prompt, stdout);
+ 	(void)fflush(stdout);
+ 
+ 	*buf = '\0';

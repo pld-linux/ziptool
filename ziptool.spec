@@ -8,6 +8,7 @@ Group:		Applications/System
 Source0:	ftp://wolfpack.twu.net/users/wolfpack/%{name}-%{version}.tar.bz2
 # Source0-md5:	e873a323c4cfdca95cb109a704dd34ee
 Patch0:		%{name}-llh.patch
+Patch1:		%{name}-format-security.patch
 URL:		http://wolfpack.twu.net/utilities.html#ziptool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,6 +23,7 @@ nośnika; jaztool i ziptool pozwalają zrobić to pod Linuksem.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} CFLAGS="%{rpmcflags}"
